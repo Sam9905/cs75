@@ -17,6 +17,10 @@ foreach ($holdings as $holding)
     print "</tr>";
 }
 ?>
+    <tr>
+        <th>Cash</th>
+        <th>$<?= htmlspecialchars($cash) ?></th>
+    </tr>
 </table>
 
 <?php

@@ -4,9 +4,15 @@ render('header', array('title' => 'C$75 Finance'));
 ?>
 
 <ul>
-	<li><a href="../html/index.php?page=quote&param=GOOG">Get quote for Google</a></li>
-	<li><a href="../html/index.php?page=portfolio">View Portfolio</a></li>
-	<li><a href="../html/index.php?page=logout">Logout</a></li>
+	<li><form method="POST" action="quote"> 
+			Search for quote: <input type="text" name="param"/>
+			<input type="submit" value="Search"/>
+	    </form>
+	</li>
+	<li><a href="buy">Buy shares</a></li>
+	<li><a href="sell">Sell shares</a></li>
+	<li><a href="portfolio">View Portfolio</a></li>
+	<li><a href="logout">Logout</a></li>
 </ul>
 
 <?php

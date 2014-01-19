@@ -27,11 +27,13 @@ if (isset($_POST['email']) &&
 	}
 	else
 	{
-		render('pwdhash',array('pwdhash' => $pwdhash));
+		echo "Username or Password is incorrect \n";
+		render('login');
 	}
 }
 else
 {
+	echo "Fill both the fields \n";
 	render('login');
 }
 ?>

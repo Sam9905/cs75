@@ -17,8 +17,8 @@ if (isset($_SESSION['userid']))
 	// get the list of holdings for user
 	$userid = (int)$_SESSION['userid'];
 	$holdings = get_user_shares($userid);
-	
-	render('portfolio', array('holdings' => $holdings));
+	$cash = get_user_balance($userid);
+	render('portfolio', array('holdings' => $holdings, 'cash' => $cash));
 }
 else
 {
