@@ -11,19 +11,34 @@ else
     // Render quote for provided quote data
     render('header', array('title' => 'Quote for '.htmlspecialchars($quote_data["symbol"])));
 ?>
-
-<table>
-    <tr>
-        <th>Symbol</th>
-        <th>Name</th>
-        <th>Last Trade</th>
-    </tr>
-    <tr>
-        <td><?= htmlspecialchars($quote_data["symbol"]) ?></td>
-        <td><?= htmlspecialchars($quote_data["name"]) ?></td>
-        <td><?= htmlspecialchars($quote_data["last_trade"]) ?></td>
-    </tr>
-</table>
+                <p class="navbar-text navbar-right">Signed In</a></p>
+            <button type="button" class="btn btn-warning navbar-btn navbar-right" href="logout">Logout</button>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-md-4 col-md-offset-1">
+        <img src="../images/GoldStocks.jpg" alt="bonds and stocks" class="img-rounded img-responsive">
+    </div>
+    <div class="table-responsive col-md-4">
+        <table class="table table-bordered table-hover table-condensed">
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Last Trade</th>
+            </tr>
+            <tr>
+                <td><?= htmlspecialchars($quote_data["symbol"]) ?></td>
+                <td><?= htmlspecialchars($quote_data["name"]) ?></td>
+                <td><?= htmlspecialchars($quote_data["last_trade"]) ?></td>
+            </tr>
+        </table>
+    </div>
+</div>
 
 <?php
 }
