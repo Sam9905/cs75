@@ -1,0 +1,26 @@
+
+   @font-face{
+        font-family:myfont2;
+        src:url('Milonga.ttf');
+    }
+    @font-face{
+        font-family:myfont1;
+        src:url('LilyScriptOne.ttf');
+    }
+    .cart{
+      font-family:myfont1;
+      text-align:center;
+      margin-left:50px;
+      color: #a61a00;
+      padding:10px;
+      text-shadow: -1px -1px 2px rgba(0,0,0, .8);
+      box-shadow:-5px 5px 12px #121212;
+      background:#ffcc66;
+      border-radius:15px;
+    }
+    .cart div{
+      font-family:myfont2;
+      color: #a61a00;
+      padding:10px;
+      text-shadow: -1px -1px 2px rgba(0,0,0, .8);
+    }

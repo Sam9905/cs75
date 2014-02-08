@@ -1,0 +1,40 @@
+<items>
+  <pizzas>
+    <pizza name="onions">
+       <price type="small">6.85</price>
+       <price type="large">10.85</price>
+    </pizza>
+    <pizza name="mushrooms">
+       <price type="small">6.85</price>
+       <price type="large">10.85</price>
+    </pizza>
+  </pizzas>
+  <spizzas>
+    <spizza name="mediterranean">
+       <price type="small">9.80</price>
+       <price type="large">15.80</price>
+    </spizza>
+    <spizza name="vegetarian">
+       <price type="small">9.80</price>
+       <price type="large">15.80</price>
+    </spizza>
+  </spizzas>
+  <sdinners>
+    <sdinner name="cheeseburger">
+       <price type="none">5.25</price>
+    </sdinner>
+    <sdinner name="gyro">
+       <price type="none">7.25</price>
+    </sdinner>
+  </sdinners>
+  <salads>
+    <salad name="garden">
+       <price type="small">3.50</price>
+       <price type="large">4.50</price>
+    </salad>
+    <salad name="greek">
+       <price type="small">3.50</price>
+       <price type="large">4.50</price>
+    </salad>
+  </salads>
+</items>
