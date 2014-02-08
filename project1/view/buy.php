@@ -14,7 +14,7 @@ render('header', array('title' => 'Buy'));
 <br/>
 <div class="row">
     <div class="col-md-4 col-md-offset-1">
-        <img src="../images/man.jpg" alt="money" class="img-rounded img-responsive">
+        <img src="http://4.bp.blogspot.com/-pqVCF1-26zs/UvX5FuwtuZI/AAAAAAAAACI/7YdDpxUfZaw/s1600/man.jpg" alt="money" class="img-rounded img-responsive">
     </div>
     <div class="col-md-4 col-md-offset-1">
       	<form role="form" method="POST" action="buy"> 

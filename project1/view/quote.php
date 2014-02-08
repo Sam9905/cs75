@@ -22,7 +22,7 @@ else
 <br/>
 <div class="row">
     <div class="col-md-4 col-md-offset-1">
-        <img src="../images/GoldStocks.jpg" alt="bonds and stocks" class="img-rounded img-responsive">
+        <img src="http://3.bp.blogspot.com/--U6ZJBKgIS0/UvX5E8u2ftI/AAAAAAAAACA/UwUDchAHgPA/s1600/GoldStocks.jpg" alt="bonds and stocks" class="img-rounded img-responsive">
     </div>
     <div class="table-responsive col-md-4">
         <table class="table table-bordered table-hover table-condensed">

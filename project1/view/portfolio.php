@@ -14,7 +14,7 @@ render('header', array('title' => 'Portfolio'));
 <br/>
 <div class="row">
     <div class="col-md-4 col-md-offset-1">
-        <img src="../images/bondstock.jpg" alt="bonds and stocks" class="img-rounded img-responsive">
+        <img src="http://3.bp.blogspot.com/-jymEhoBb5oU/UvX5DcRaZ1I/AAAAAAAAAB0/EVDimJn6juY/s1600/bondstock.jpg" alt="bonds and stocks" class="img-rounded img-responsive">
     </div>
     <div class="table-responsive col-md-4">
         <table class="table table-bordered table-hover table-condensed">

@@ -14,7 +14,7 @@ render('header', array('title' => 'C$75 Finance'));
 <br/>
 <br/>
 <div class="container">
-	<div class="jumbotron" style="background-image:url(../images/backblack.jpg);">
+	<div class="jumbotron" style="background-image:url(http://4.bp.blogspot.com/-bc7LBT39LHM/UvX4El05xEI/AAAAAAAAABo/GzenV-oZQkY/s1600/backblack.jpg);">
 		<h1 style="color:#FFCC00;">Stocks and Shares</h1>
 		<p style="color:#FFCC00;">Invest your money</p>
 		<a class="btn btn-success" href="portfolio">View Portfolio</a>
