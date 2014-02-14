@@ -152,7 +152,10 @@ function buy_shares($userid, $symbol, $shares, &$error)
 	$handle = fopen($url, "r");
 	if ($row = fgetcsv($handle))
 		if (isset($row[1]))
-			$price = $row[1]*$shares;
+			$price =$row[1]*$shares;
+
+	$message = $price;
+	echo "<script type='text/javascript'>alert('$message');</script>";
 
 	// check if has required balance
 	$query = sprintf("SELECT * FROM users WHERE id = '%d'",$userid);
@@ -165,13 +168,14 @@ function buy_shares($userid, $symbol, $shares, &$error)
 	}
 
 	// buy the shares
+	$symbol = strtoupper($symbol);
 	$dbh->beginTransaction();
 	$query = sprintf("UPDATE portfolios SET shares = shares + '%d' WHERE id = '%d' AND symbol ='%s'",$shares,$userid,$symbol);
 	if($dbh->exec($query) == 0){
 		$query = sprintf("INSERT INTO portfolios VALUES ('%d','%s','%d')",$userid,$symbol,$shares);
 		$dbh->query($query);
 	}
-	$query = sprintf("UPDATE users SET balance = balance - '%d' WHERE id = '%d'",$price,$userid);
+	$query = sprintf("UPDATE users SET balance = balance - '%f' WHERE id = '%d'",$price,$userid);
 	$dbh->query($query);
 	$dbh->commit();
 
@@ -202,10 +206,11 @@ function sell_shares($userid, $symbol, &$error)
 		return false;
 	}
 	// sell shares
+	$symbol = strtoupper($symbol);
 	$dbh->beginTransaction();
 	$query = sprintf("DELETE FROM portfolios WHERE id='%d' AND symbol='%s'",$userid,$symbol);
 	$dbh->query($query);
-	$query = sprintf("UPDATE users SET balance = balance + '%d' WHERE id = '%d'",$price,$userid);
+	$query = sprintf("UPDATE users SET balance = balance + '%f' WHERE id = '%d'",$price,$userid);
 	$dbh->query($query);
 	$dbh->commit();
 
