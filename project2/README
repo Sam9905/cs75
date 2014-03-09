@@ -20,20 +20,20 @@ Databases
 
 Folders
 •	html
-o	index.php
+	o	index.php
 •	controller
-o	home.php
+	o	home.php
 •	view
-o	header.php
-o	home.php
-o	footer.php
+	o	header.php
+	o	home.php
+	o	footer.php
 •	model
-o	model.php
-o	data.js
-o	routes.php
-o	longitudes.php
-o	latitudes.php
-o	info.php
+	o	model.php
+	o	data.js
+	o	routes.php
+	o	longitudes.php
+	o	latitudes.php
+	o	info.php
 
 Request starts from html folder and goes as follows:
 html( index.php ) -->
