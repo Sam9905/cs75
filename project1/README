@@ -1,4 +1,111 @@
-This is the Walkthrough for Project 1.
+PROBLEM
+The mission for this project is to implement C$ Finance , a website that allows users to manage portfolios of stocks.
 
-Chris Gerber
-TF, S-75
+The site’s homepage must require user login and also allow to register for an account. It should allow user to get a quote for a stock by providing its symbol. It should allow user to buy and sell shares of a stock. It should allow to check the current value of his or her portfolio.
+
+TECHNOLOGIES USED
+•	HTML
+•	php
+•	SQL - MySQL
+•	Bootstrap
+•	Javascript
+
+OVERVIEW
+
+Databases
+•	portfolios(id, symbol, shares)
+•	users(id, email, passwordhash, balance)  
+
+
+Folders
+•	html
+	o	index.php
+•	controller
+	o	home.php
+	o	login.php
+	o	logout.php
+	o	register.php
+	o	quote.php
+	o	portfolio.php
+	o	buy.php
+	o	sell.php
+•	view
+	o	header.php
+	o	home.php
+	o	footer.php
+	o	register.php
+	o	login.php
+	o	quote.php
+	o	portfolio.php
+	o	buy.php
+	o	sell.php
+•	model
+	o	model.php
+•	includes
+	o	helper.php
+
+FLOW
+                      /  html       \ direct
+         	form/link    controller /  \                 <--> model
+                      \  view          / render
+
+		*First user
+			|
+		html( index.php)
+		(session_start)
+			|
+		controller( home.php )
+			|
+		view( login.php )
+			|
+		*view( register.php )
+			|
+		*controller( register.php )
+			|
+		*view( login.php )                              
+			|
+		controller( login.php )
+		(session id is set)
+			|
+		view( home.php )
+			|
+	|			  |				   |		
+portfolio 		quote			logout
+	|			  |				   |
+controller		controller		controller(session_destroy)(session id is unset)
+	|			  |                |	
+  view			 view 			 view
+
+
+
+•	html
+	o	index.php -> ../controller/page.php or home.php
+
+•	controller
+	o	home.php -> ../view/home.php or login.php
+	o	login.php -> ../view/home.php or login.php
+	o	logout.php -> ../view/login.php
+	o	portfolio.php -> ../view/portfolio.php or login.php
+	o	quote.php -> ../view/quote.php
+	o	sell.php -> ../view/sell.php or portfolio.php
+	o	buy.php -> ../view/buy.php or portfolio.php
+
+•	view
+	o	header.php
+	o	footer.php
+	o	home.php -> quote or portfolio or logout -> html/
+	o	login.php -> form -> html/
+	o	register.php ->form -> html/
+	o	quote.php -> table of symbol, name and last trade
+	o	portfolio.php -> table of symbols and shares
+	o	buy.php -> form -> html/ 
+	o	sell.php -> form -> html/
+
+
+Used .htaccess file to have good looking urls
+
+	# // Project 1
+	RewriteEngine on
+	RewriteBase /Harvard/project1
+	RewriteCond %{REQUEST_URI} !html/index.php
+	RewriteRule html/([a-z]+)(\/(.+))? html/index.php?page=$1&param=$3
